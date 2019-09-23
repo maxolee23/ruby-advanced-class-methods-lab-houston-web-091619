@@ -45,4 +45,10 @@ class Song
       self.create_by_name(title)
     end
   end
+
+  def self.alphabetical
+    alph = self.all.sort_by {|song| song.name}
+    alph
+  end
+
 end
